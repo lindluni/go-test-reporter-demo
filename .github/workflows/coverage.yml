@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Run Tests with Coverage
-        run: go test -json ./... | jq -s > results.json
+        run: go test -cover -json ./... | jq -s > results.json
       - uses: lindluni/go-test-reporter@main
         with:
           coverage_file: results.json
