@@ -1,10 +1,6 @@
-package main
+package bad
 
 import "fmt"
-
-func main() {
-	println("Hello, world.")
-}
 
 func println(args ...interface{}) {
 	fmt.Println(args...)
